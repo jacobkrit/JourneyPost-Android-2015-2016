@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+	This file is rendered by express.js, when the rurl /chat/123456 is visited in a browser.
+	It includes jQuery, socket.io.js (it is automatically served by the socket.io library), 
+	and a few more JavaScript files that you should check out.
+-->
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	<title>Private chat room | Tutorialzine Demo</title>
+
+	<link type="text/css" rel="stylesheet" href="css\stylesheet.css">
+	<link href="css\css.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+
+	<header class="banner">
+
+		<h1 class="bannertext">
+			<img class="img-responsive" id="header-logo" src="image\journey-post-logo-white.png" height="62" width="242" >
+		</h1>
+
+	</header>
+
+
+	<section class="section">
+
+		<!-- These elements are displayed as white info cards in the middle of the screen -->
+
+		<div style="display: none;" class="connected">
+
+			<img src="Private%20chat%20room%20%7C%20Tutorialzine%20Demo_files/unnamed.jpg" id="creatorImage">
+
+			<div class="infoConnected">
+				<h2>Who are you?</h2>
+				<br>
+
+				<form class="loginForm">
+					<input id="yourName" placeholder="Your nick name" type="text"><br>
+					<input id="yourEmail" placeholder="Your email address" type="text"><br>
+					<input id="yourEnter" value="ENTER" type="submit">
+				</form>
+
+			</div>
+
+		</div>
+
+		<div style="display: none;" class="personinside">
+
+			<img src="Private%20chat%20room%20%7C%20Tutorialzine%20Demo_files/89b4f7233d3eb7827562dab5eb2cf1a4.jpeg" id="ownerImage">
+
+			<div class="infoInside">
+				<h2>Chat with <span class="nickname-chat">jacob</span></h2>
+				<br>
+
+				<form class="loginForm">
+					<input value="orestis" id="hisName" placeholder="Your nick name" type="text"><br>
+					<input value="asfd@njfda.gr" id="hisEmail" placeholder="Your email address" type="text"><br>
+					<input id="hisEnter" value="CHAT" type="submit">
+				</form>
+
+			</div>
+
+		</div>
+
+		<div style="display: none;" class="invite-textfield">
+
+			<h2>Oops, there are no other people in this chat!</h2>
+			<h5>Invite a friend by sending them this URL</h5>
+
+			<div class="link">
+				<a title="Invite a friend" href="" id="link"></a>
+			</div>
+
+		</div>
+
+		<div style="display: none;" class="left">
+
+			<img src="Private%20chat%20room%20%7C%20Tutorialzine%20Demo_files/unnamed.jpg" id="leftImage">
+
+			<div class="info">
+				<h2><span class="nickname-left"></span> has left this chat.</h2>
+				<h5>Invite somebody else by sending them this page.</h5>
+			</div>
+
+		</div>
+
+		<div style="display: none;" class="toomanypeople">
+
+			<h2>Oops, you can not join this chat!</h2>
+			<h5>There are already two people in it. Would you like to create a <a title="New Room" href="http://localhost:8080/create" id="room">new room</a>?</h5>
+
+		</div>
+
+		<div style="display: none;" class="nomessages">
+
+			<img src="Private%20chat%20room%20%7C%20Tutorialzine%20Demo_files/89b4f7233d3eb7827562dab5eb2cf1a4.jpeg" id="noMessagesImage">
+
+			<div class="info">
+				<h2>You are chatting with <span class="nickname-chat">jacob</span>.</h2>
+				<h5>Send them a message from the form below!</h5>
+			</div>
+
+		</div>
+
+		<div style="display: block;" class="chatscreen">
+
+			<ul class="chats"><li class="me"><div class="image"><img src="Private%20chat%20room%20%7C%20Tutorialzine%20Demo_files/aae75afc365e52400d6f39e9a227614b.jpeg"><b>orestis</b><i class="timesent" data-time="1432931846643">a few seconds ago</i> </div><p>geia sou</p></li><li class="you"><div class="image"><img src="Private%20chat%20room%20%7C%20Tutorialzine%20Demo_files/89b4f7233d3eb7827562dab5eb2cf1a4.jpeg"><b>jacob</b><i class="timesent" data-time="1432931852367">a few seconds ago</i> </div><p>geia sou kai esena</p></li><li class="me"><div class="image"><img src="Private%20chat%20room%20%7C%20Tutorialzine%20Demo_files/aae75afc365e52400d6f39e9a227614b.jpeg"><b>orestis</b><i class="timesent" data-time="1432931866923">a few seconds ago</i> </div><p>Tha mou dei3eis thn A8hna?</p></li></ul>
+
+		</div>
+
+	</section>
+
+	<footer style="display: block;">
+
+		<form id="chatform">
+
+			<textarea id="message" placeholder="Chat and discover..."></textarea>
+			<input id="submit" value="SEND" type="submit">
+
+		</form>
+
+	</footer>
+
+	<script src="js\jquery.js"></script>
+	<script src="js\moment.js"></script>
+	<script src="js\socket.js"></script>
+	<script src="js\chat.js"></script>
+
+
+
+</body></html>

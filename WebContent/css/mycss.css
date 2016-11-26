@@ -1,0 +1,21 @@
+ p       { background-color: green;                          
+                   }         
+                                        
+           h1       { font-family: tahoma, helvetica, sans-serif }        
+           .special { color: red; }
+           
+           p.kapws { color :fuchsia; }
+           
+           #div3
+		    {
+					text-align:center;
+					color:red;
+			} 
+			
+			body {background-color: SteelBlue }	
+			
+			iframe{
+				width:200;
+				height:300;
+			}
+			

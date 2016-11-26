@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>PlayMaker</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ProcessFormIng</display-name>
+    <servlet-name>ProcessFormIng</servlet-name>
+    <servlet-class>servlets.ProcessFormIng</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProcessFormIng</servlet-name>
+    <url-pattern>/ProcessFormIng</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProcessFormServlet</display-name>
+    <servlet-name>ProcessFormServlet</servlet-name>
+    <servlet-class>servlets.ProcessFormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProcessFormServlet</servlet-name>
+    <url-pattern>/ProcessFormServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ValidationServlet</display-name>
+    <servlet-name>ValidationServlet</servlet-name>
+    <servlet-class>servlets.ValidationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ValidationServlet</servlet-name>
+    <url-pattern>/ValidationServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
